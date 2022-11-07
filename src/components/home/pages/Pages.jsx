@@ -12,10 +12,10 @@ export const Pages = () => {
     return (
         <Router>
             <Header />
-            {/* <Switch>
+            <Switch>
                 <Route exact path='/' component={Home} />
             </Switch>
-            <Footer /> */}
+            {/* <Footer /> */}
         </Router>
     )
 }
