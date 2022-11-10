@@ -1,8 +1,10 @@
 import React from 'react'
+import { useState } from 'react'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { FiSearch, FiShoppingBag } from 'react-icons/fi'
 
 export const SearchItems = ({ value, product, onSearch }) => {
+    
     return (
         <>
             <section className='searchItems'>
@@ -11,7 +13,7 @@ export const SearchItems = ({ value, product, onSearch }) => {
                         const searchkey = value.toLowerCase()
                         const title = items.title.toLowerCase()
 
-                        return searchkey && title.startWith(searchkey) && title != searchkey
+                        return searchkey && title.startsWith(searchkey) && title != searchkey
                     }).slice(0, 10).map((items) => (
                         <div className="box" key={items.id}>
                             <div className="img">
@@ -23,7 +25,7 @@ export const SearchItems = ({ value, product, onSearch }) => {
                                     <button className='button'>
                                         <AiOutlineHeart />
                                     </button>
-                                    <button className='button' onClick={() => onOpenImg(items.cover)}>
+                                    <button className='button'>
                                         <FiSearch />
                                     </button>
                                 </div>

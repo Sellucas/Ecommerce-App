@@ -2,6 +2,7 @@ import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { useState } from 'react'
 import { SearchItems } from './SearchItems'
+import { products } from '../../assets/data/data'
 
 export const Hero = () => {
     const [value, setValue] = useState('')
@@ -32,7 +33,7 @@ export const Hero = () => {
                             <BiSearch className='searchIcon heIcon' />
                         </button>
                     </div>
-                    <SearchItems product={product} value={value} onSearch={onSearch} />
+                    <SearchItems product={products} value={value} onSearch={onSearch} />
                     <p>Examples: Mockip, PSD, Theme Design, Image...</p>
 
                 </div>
