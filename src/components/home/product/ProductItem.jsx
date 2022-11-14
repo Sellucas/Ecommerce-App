@@ -2,6 +2,8 @@ import React from 'react'
 import { FiShoppingBag, FiSearch } from 'react-icons/fi'
 import { AiOutlineClose, AiOutlineHeart } from 'react-icons/ai'
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import {ADD} from '../../../controller/action'
 
 export const ProductItem = ({ data }) => {
     const [openImage, setOpenImage] = useState(false)
@@ -10,6 +12,12 @@ export const ProductItem = ({ data }) => {
     const onOpenImg = (src) => {
         setImg(src)
         setOpenImage(true)
+    }
+
+    const dispatch = useDispatch()
+
+    const addToCart = (e) => {
+        dispatch(ADD(e))
     }
 
     return (
@@ -21,7 +29,7 @@ export const ProductItem = ({ data }) => {
                             <img src={items.cover} alt="" />
                             <div className="overlay">
                                 <button className='button'>
-                                    <FiShoppingBag />
+                                    <FiShoppingBag onClick={() => addToCart(items)} />
                                 </button>
                                 <button className='button'>
                                     <AiOutlineHeart />

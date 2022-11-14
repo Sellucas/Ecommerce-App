@@ -6,6 +6,7 @@ import { AiOutlineHeart, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { navlist } from '../assets/data/data';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux';
 
 export const Header = () => {
     window.addEventListener('scroll', function () {
@@ -15,9 +16,13 @@ export const Header = () => {
 
     const [mobile, setMobile] = useState(false);
 
+    //cart add in shop
+    const getdata = useSelector((state) => state.cartReducer.carts)
+    console.log(getdata)
+
     return (
         <>
-            <header>
+            <header className='header'>
                 <div className="container">
                     <nav>
                         <div className="toggle">
@@ -26,7 +31,7 @@ export const Header = () => {
                             </button>
                         </div>
                         <div className="left">
-                            <p className='logo'>Logo</p>
+                            <p className='logo'>IMPERIAL</p>
                         </div>
                         <div className="center">
                             <ul className={mobile ? 'mobile-nav' : 'menu'}>
@@ -50,8 +55,11 @@ export const Header = () => {
                         <div className="right_card">
                             <button className='button'>
                                 <BsBagCheck className='shop heIcon' />
-                                MY CART (0)
+                                MY CART ({getdata.length})
                             </button>
+                            <div className="showCart">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,3 +67,11 @@ export const Header = () => {
         </>
     )
 }
+
+const mapStateToProps = (state) => {
+    return {
+        amount: state.amount,
+    }
+}
+
+connect(mapStateToProps)(Header)
