@@ -1,12 +1,14 @@
 import React from 'react'
+import cartimg from '../assets/images/cart.png'
 import { BsBagCheck } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import { RiUser3Line } from 'react-icons/ri';
-import { AiOutlineHeart, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineHeart, AiOutlineMenu, AiOutlineClose, AiOutlineDelete } from 'react-icons/ai';
 import { navlist } from '../assets/data/data';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
+import { DELETE } from '../../controller/action'
 
 export const Header = () => {
     window.addEventListener('scroll', function () {
@@ -19,6 +21,16 @@ export const Header = () => {
     //cart add in shop
     const getdata = useSelector((state) => state.cartReducer.carts)
     console.log(getdata)
+
+    const [cartList, setCartList] = useState(false)
+    const handleClose = () => {
+        setCartList(null)
+    }
+
+    const dispatch = useDispatch()
+    const delet = (id) => {
+        dispatch(DELETE(id))
+    }
 
     return (
         <>
@@ -53,12 +65,48 @@ export const Header = () => {
                             <AiOutlineHeart className='userIcon heIcon' />
                         </div>
                         <div className="right_card">
-                            <button className='button'>
+                            <button className='button' onClick={() => setCartList(!cartList)}>
                                 <BsBagCheck className='shop heIcon' />
                                 MY CART ({getdata.length})
                             </button>
-                            <div className="showCart">
-                                
+                            <div className={cartList ? 'showCart' : 'hideCart'}>
+                                {getdata.length ? (
+                                    <section className='details'>
+                                        <div className="details_title">
+                                            <h3>Photo</h3>
+                                            <p>Product Name</p>
+                                        </div>
+                                        {getdata.map((e) => (
+                                            <div className="details_content">
+                                                <div className="details_content_img">
+                                                    <Link to={`/cart/${e.id}`} onClick={handleClose}>
+                                                        <img src={e.cover} alt="" />
+                                                    </Link>
+                                                </div>
+                                                <div className="details_content_detail">
+                                                    <div className="details_content_detail_price">
+                                                        <p>{e.title.slice(0, 20)} ...</p>
+                                                        <p>Price: ${e.price}</p>
+                                                        <p>Quantity: {e.qty}</p>
+                                                    </div>
+                                                </div>
+                                                <div className="details_content_detail_icon">
+                                                    <i onClick={() => delet(e.id)}>
+                                                        <AiOutlineDelete />
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        ))}
+                                        <div className="details_total">
+                                            <h4>Total: $30</h4>
+                                        </div>
+                                    </section>
+                                ) : (
+                                    <div className="empty">
+                                        <p>Your cart is empty</p>
+                                        <img src={cartimg} alt="" />
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
