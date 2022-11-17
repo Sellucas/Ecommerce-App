@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { Footer } from '../../common/Footer';
 import { Header } from '../../common/Header';
+import { Details } from '../details/Details';
 import { Home } from '../Home';
 
 export const Pages = () => {
@@ -13,9 +14,14 @@ export const Pages = () => {
         <Router>
             <Header />
             <Switch>
-                <Route exact path='/' component={Home} />
+                <Route exact path='/'>
+                    <Home />
+                </Route>
+                <Route exact path='/cart/:id'>
+                    <Details />
+                </Route>
             </Switch>
             <Footer />
-        </Router>
+        </Router >
     )
 }

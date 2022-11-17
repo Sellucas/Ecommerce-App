@@ -13,3 +13,10 @@ export const DELETE = (id) => {
         payload: id
     }
 }
+
+export const REMOVE_INT = (item) => {
+    return {
+        type: REMOVE_INT,
+        payload: item
+    }
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cartimg from '../assets/images/cart.png'
 import { BsBagCheck } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
@@ -31,6 +31,21 @@ export const Header = () => {
     const delet = (id) => {
         dispatch(DELETE(id))
     }
+
+    // Total price
+    const [price, setPrice] = useState(0)
+
+    const totals = () => {
+        let price = 0
+        getdata.map((e, i) => {
+            price = parseFloat(e.price) * e.qty + price
+        })
+        setPrice(price)
+    }
+
+    useEffect(() => {
+        totals()
+    }, [totals])
 
     return (
         <>
@@ -98,7 +113,7 @@ export const Header = () => {
                                             </div>
                                         ))}
                                         <div className="details_total">
-                                            <h4>Total: $30</h4>
+                                            <h4>Total: ${price}</h4>
                                         </div>
                                     </section>
                                 ) : (
