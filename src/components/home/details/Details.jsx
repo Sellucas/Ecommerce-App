@@ -56,7 +56,7 @@ export const Details = () => {
                                     <MdStarRate />
                                     <label htmlFor="">(1 costumer review)</label>
                                 </div>
-                                <h3>${item.price * item.qty}</h3>
+                                <h3>R${item.price * item.qty}</h3>
                                 <p>{item.author}</p>
                                 <div className="qty">
                                     <div className="count">

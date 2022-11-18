@@ -59,12 +59,12 @@
 
   // card
   .cards {
-    @include grid(repeat(3, 1fr), 30px);
+    @include grid(repeat(3, 1fr), 10px);
   }
   .topproduct,
   .product {
     .product_items {
-      @include grid(repeat(2, 1fr), 30px);
+      @include grid(repeat(2, 1fr), 20px);
     }
   }
   .topproduct {
@@ -81,7 +81,7 @@
   }
   .banner {
     .posts {
-      @include grid(repeat(1, 1fr), 30px);
+      @include grid(repeat(1, 1fr), 20px);
     }
   }
   .price {

@@ -23,7 +23,7 @@ export const TopProduct = () => {
             <section className='topproduct'>
                 <div className="container">
                     <div className="head">
-                        <Heading title='Top Selling Products' desc='Meet our Newbies! The lastest templates uploaded to the marketplace.' />
+                        <Heading title='Produtos mais vendidos' desc='Conheça nossos mais recentes e atualizados modelos do mercado.' />
                         <div className="category">
                             {category.map((category) => (
                                 <button className='button' onClick={() => handleFilter(category)}>{category}</button>

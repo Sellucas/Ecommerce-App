@@ -6,7 +6,7 @@ export const Blog = () => {
     return (
         <>
             <section className='blog'>
-                <Heading title='LATEST BLOG POSTS' desc='Latest marketplace news, success stories and tutorials.' />
+                <Heading title='ÚLTIMAS POSTAGENS DO BLOG' desc='Recentes notícias do mercado, histórias de sucesso e tutoriais.' />
 
                 <div className="posts">
                     {blog.slice(0, 3).map((items) => (

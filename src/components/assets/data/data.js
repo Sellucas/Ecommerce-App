@@ -7,11 +7,11 @@ export const navlist = [
     path: "/",
   },
   {
-    text: "shop",
+    text: "loja",
     path: "/shop",
   },
   {
-    text: "about us",
+    text: "sobre",
     path: "/about",
   },
   {
@@ -19,7 +19,7 @@ export const navlist = [
     path: "/blog",
   },
   {
-    text: "contact us",
+    text: "contato",
     path: "/contact",
   },
 ]
@@ -134,14 +134,14 @@ export const banner = [
     id: 1,
     title1: "Simple IPhone ",
     title2: "Mockups Design PSD, Ai, EPS",
-    desc: "Sale 30% Off For Members",
+    desc: "30% de desconto para membros",
     cover: "../images/banner/b2.png",
   },
   {
     id: 2,
     title1: "Mockup PSD",
     title2: "50+ Ui Screen Mockups",
-    desc: "Sale 30% Off For Members",
+    desc: "30% de desconto para membros",
     cover: "../images/banner/b1.png",
   },
 ]
@@ -225,7 +225,7 @@ export const price = [
     id: 1,
     name: "Free Trial",
     price: "0",
-    desc: "Beautifully simple project planning, 14 days of free trial.",
+    desc: "Planejamento de projeto simples, 14 dias de avaliação gratuita.",
     list: [
       {
         para: "Demo Content Install",
@@ -257,7 +257,7 @@ export const price = [
     id: 2,
     name: "Premium",
     price: "26",
-    desc: "Declutter your mind and save time with Premium.",
+    desc: "Organize sua mente e economize tempo com o Premium.",
     list: [
       {
         para: "Demo Content Install",
@@ -289,7 +289,7 @@ export const price = [
     id: 3,
     name: "Unlimited Access ",
     price: "49",
-    desc: "Declutter your mind and save time with Premium.",
+    desc: "Organize sua mente e economize tempo com o Premium.",
     list: [
       {
         para: "Demo Content Install",
@@ -343,7 +343,7 @@ export const blog = [
     id: 1,
     date: "October 27, 2021",
     title: "Transition Your Favorite Looks into  Fall France 2022",
-    category: "image",
+    category: "imagem",
     cover: "../images/blog/b1.jpg",
   },
   {
@@ -357,7 +357,7 @@ export const blog = [
     id: 3,
     date: "October 27, 2021",
     title: "Perfect Quality Reasonable Price for Your",
-    category: "travle",
+    category: "viagem",
     cover: "../images/blog/b3.jpg",
   },
   {

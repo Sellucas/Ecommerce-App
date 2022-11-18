@@ -72,7 +72,7 @@ export const Header = () => {
                     </nav>
                     <div className="right">
                         <div className="right_search">
-                            <input type="text" placeholder='Search products ...' />
+                            <input type="text" placeholder='Pesquisar produtos ...' />
                             <BiSearch className='searchIcon heIcon' />
                         </div>
                         <div className="right_user">
@@ -82,14 +82,14 @@ export const Header = () => {
                         <div className="right_card">
                             <button className='button' onClick={() => setCartList(!cartList)}>
                                 <BsBagCheck className='shop heIcon' />
-                                MY CART ({getdata.length})
+                                Carrinho ({getdata.length})
                             </button>
                             <div className={cartList ? 'showCart' : 'hideCart'}>
                                 {getdata.length ? (
                                     <section className='details'>
                                         <div className="details_title">
-                                            <h3>Photo</h3>
-                                            <p>Product Name</p>
+                                            <h3>Imagem</h3>
+                                            <p>Nome Produto</p>
                                         </div>
                                         {getdata.map((e) => (
                                             <div className="details_content">
@@ -101,8 +101,8 @@ export const Header = () => {
                                                 <div className="details_content_detail">
                                                     <div className="details_content_detail_price">
                                                         <p>{e.title.slice(0, 20)} ...</p>
-                                                        <p>Price: ${e.price}</p>
-                                                        <p>Quantity: {e.qty}</p>
+                                                        <p>Preço: R${e.price}</p>
+                                                        <p>Quantidade: {e.qty}</p>
                                                     </div>
                                                 </div>
                                                 <div className="details_content_detail_icon">
@@ -113,12 +113,12 @@ export const Header = () => {
                                             </div>
                                         ))}
                                         <div className="details_total">
-                                            <h4>Total: ${price}</h4>
+                                            <h4>Total: R${price}</h4>
                                         </div>
                                     </section>
                                 ) : (
                                     <div className="empty">
-                                        <p>Your cart is empty</p>
+                                        <p>Seu carrinho está vazio!</p>
                                         <img src={cartimg} alt="" />
                                     </div>
                                 )}

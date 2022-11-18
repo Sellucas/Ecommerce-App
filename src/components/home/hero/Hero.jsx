@@ -21,20 +21,20 @@ export const Hero = () => {
             <section className='hero'>
                 <div className="container">
                     <h1>
-                        <label>Over <span>6,500</span> Curated Design</label> <br />
-                        <label>Resources, <span> Graphic & Website</span> Templates</label>
+                        <label>Mais de <span>6,500</span> Design Planejados</label> <br />
+                        <label>Recursos, <span> Gráficos & Website</span> Templates</label>
                     </h1>
-                    <p>High-quality Design Themes for personal or commercial use contains 6k+ items in 100 categories.</p>
+                    <p>Temas de design de alta qualidade para uso pessoal ou comercial contém mais de 6 mil itens em 100 categorias.</p>
                     <div className="search">
                         <span>All Categories</span>
                         <hr />
-                        <input type="text" placeholder='Search Products ...' onChange={onChange} value={value} />
+                        <input type="text" placeholder='Pesquisar produtos ...' onChange={onChange} value={value} />
                         <button onClick={() => onSearch(value)}>
                             <BiSearch className='searchIcon heIcon' />
                         </button>
                     </div>
                     <SearchItems product={products} value={value} onSearch={onSearch} />
-                    <p>Examples: Mockip, PSD, Theme Design, Image...</p>
+                    <p>Exemplos: Mockip, PSD, Theme Design, Image...</p>
 
                 </div>
             </section>
