@@ -223,7 +223,7 @@ export const topProducts = [
 export const price = [
   {
     id: 1,
-    name: "Free Trial",
+    name: "Teste grátis",
     price: "0",
     desc: "Planejamento de projeto simples, 14 dias de avaliação gratuita.",
     list: [
@@ -287,7 +287,7 @@ export const price = [
   },
   {
     id: 3,
-    name: "Unlimited Access ",
+    name: "Acesso Ilimitado",
     price: "49",
     desc: "Organize sua mente e economize tempo com o Premium.",
     list: [
