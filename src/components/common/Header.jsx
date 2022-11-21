@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import cartimg from '../assets/images/cart.png'
+import logo from '../assets/images/logo.png'
 import { BsBagCheck } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import { RiUser3Line } from 'react-icons/ri';
@@ -58,7 +59,9 @@ export const Header = () => {
                             </button>
                         </div>
                         <div className="left">
-                            <p className='logo'>IMPERIAL</p>
+                            <Link to='/'>
+                                <img src={logo} alt='logo' />
+                            </Link>
                         </div>
                         <div className="center">
                             <ul className={mobile ? 'mobile-nav' : 'menu'}>
