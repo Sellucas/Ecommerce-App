@@ -18,7 +18,7 @@ export const Blog = () => {
 
                                 <div className="text">
                                     <button className='button'>{items.category}</button>
-                                    <p>Post Date: <span>{items.date}</span></p>
+                                    <p>Post Data: <span>{items.date}</span></p>
                                     <h3>{items.title.slice(0,35)}...</h3>
                                 </div>
                             </div>
