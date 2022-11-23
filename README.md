@@ -4,9 +4,9 @@ IMG
 
 ## 💾 About
 
-IMPERIAL is an E-commerce that brings together products such as: Web Theme, Mockups, Icons, among others. It has functionalities/
+IMPERIAL is an E-commerce that brings together products such as: Web Theme, Mockups, Icons, among others.
 
-features of search items, search categories, cart, item details.
+It has functionalities/features of search items, search categories, cart, item details.
 
 ## 🚀 Technologies
 
