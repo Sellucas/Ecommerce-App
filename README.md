@@ -10,11 +10,11 @@ IMPERIAL is an E-commerce that brings together products such as: Web Theme, Mock
 
 IMPERIAL was developed using the following technologies:
 
-• React.js
-• JavaScript
-• Redux
-• React Router Dom
-• Scss
+- React.js
+- JavaScript
+- Redux
+- React Router Dom
+- Scss
 
 ## Available Scripts
 
