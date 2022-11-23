@@ -18,7 +18,7 @@ IMPERIAL was developed using the following technologies:
 - React Router Dom
 - Scss
 
-## Available Scripts
+## 🔧 Available Scripts
 
 ### `npm start`
 
