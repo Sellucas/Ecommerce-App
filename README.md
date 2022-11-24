@@ -8,6 +8,8 @@ IMPERIAL is an E-commerce that brings together products such as: Web Theme, Mock
 
 It has functionalities/features of search items, search categories, cart, item details.
 
+The deployment was done with Vercel, and is available [here](https://ecommerce-k3hfnboqr-sellucas.vercel.app/)
+
 ## 🚀 Technologies
 
 IMPERIAL was developed using the following technologies:
@@ -17,6 +19,7 @@ IMPERIAL was developed using the following technologies:
 - Redux
 - React Router Dom
 - Scss
+- Vercel
 
 ## 🔧 Available Scripts
 
