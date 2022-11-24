@@ -4,7 +4,7 @@
 
 ## 💾 About
 
-IMPERIAL is an E-commerce that brings together products such as: Web Theme, Mockups, Icons, among others.
+**IMPERIAL** is an E-commerce that brings together products such as: Web Theme, Mockups, Icons, among others.
 
 It has functionalities/features of search items, search categories, cart, item details.
 
@@ -12,7 +12,7 @@ The deployment was done with Vercel, and is available [here](https://ecommerce-k
 
 ## 🚀 Technologies
 
-IMPERIAL was developed using the following technologies:
+**IMPERIAL** was developed using the following technologies:
 
 - React.js
 - JavaScript
