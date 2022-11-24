@@ -15,7 +15,6 @@ The deployment was done with Vercel, and is available [here](https://ecommerce-k
 **IMPERIAL** was developed using the following technologies:
 
 - React.js
-- JavaScript
 - Redux
 - React Router Dom
 - Scss
